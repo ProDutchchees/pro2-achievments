@@ -1,0 +1,61 @@
+using System;
+
+namespace opdracht_1
+{
+    class Program
+    {
+        // player
+        string PlayerName = "Rem";
+        byte playerhealth = 100;
+        byte PlayerHealthMax = 100;
+        bool HasPlayerRun = false;
+
+        static string CommandAttack = "attack";
+        static string CommandDefend = "defend";
+        static string CommandMagic = "magic";
+
+        bool IsGameOver = false;
+
+        // demon
+        string MonsterName = "Demon King";
+        int MonstereAtk = 5;
+        int MonsterHp = 30;
+
+        static void Main(string[] args)
+        {
+
+            Console.BackgroundColor = ConsoleColor.White;
+            Console.ForegroundColor = ConsoleColor.Black;
+
+
+            Console.Clear();
+
+            Console.WriteLine("                                   ##################################################");
+            Console.WriteLine("                                   ##################################################");
+            Console.WriteLine("                                   ##############                      ##############");
+            Console.WriteLine("                                   ##############     Demon  Slayer    ##############");
+            Console.WriteLine("                                   ##############                      ##############");
+            Console.WriteLine("                                   ##################################################");
+            Console.WriteLine("                                   ##################################################");
+
+
+            Console.CursorTop += 2;
+            Console.CursorLeft = 10;
+            Console.WriteLine("                                         Are you ready"); // \n staat voor "newline"\
+
+            Console.WriteLine("Type one of the next commands");
+            Console.WriteLine("Choose from: " + CommandAttack + "," + CommandDefend + " or " + CommandMagic);
+
+            // Input van gebruiker
+            Console.ReadLine();
+            Console.Clear();
+            Console.WriteLine("Your name is Rem.");
+            Console.WriteLine("Your on a quest to kill the stongest monster, the Demon King.");
+            Console.WriteLine("You spend your life training for this moment.");
+            Console.WriteLine("Now, the time has finnaly come.");
+            System.Threading.Thread.Sleep(10);
+            Console.ReadLine();
+            Console.Clear();
+        }
+    }
+}
